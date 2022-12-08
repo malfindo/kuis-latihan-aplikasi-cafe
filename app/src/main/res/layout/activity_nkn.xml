@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".ActivityNkn">
+
+    <TextView
+        android:id="@+id/teksHdrNkn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather_bold"
+        android:lineSpacingExtra="20sp"
+        android:text="Datadiri Pembuat"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:typeface="sans" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edNama"
+        android:text="Nama"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/teksHdrNkn"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edKelas"
+        android:text="Kelas"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/edNama"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edNpm"
+        android:text="NPM"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@id/edKelas"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/isNama"
+        android:text="MUHAMMAD MALFIN"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/edNama"
+        android:layout_alignBottom="@+id/edNama"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/isKelas"
+        android:text="TIP-21.2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/edKelas"
+        android:layout_alignBottom="@+id/edKelas"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/isNpm"
+        android:text="1121080093"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_alignBaseline="@+id/edNpm"
+        android:layout_alignBottom="@+id/edNpm"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:id="@+id/btnKemNkn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edNpm"
+        android:layout_marginTop="10dp"
+        android:text="Kembali" />
+
+
+</RelativeLayout>

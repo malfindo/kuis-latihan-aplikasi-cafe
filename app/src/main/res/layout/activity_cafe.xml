@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ActivityCafe">
+
+    <TextView
+        android:id="@+id/teksHdrCafe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/merriweather_bold"
+        android:lineSpacingExtra="20sp"
+        android:text="Cafe STEKOM"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:typeface="sans" />
+
+    <CheckBox
+        android:id="@+id/cbNao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@+id/teksHdrCafe"
+        android:layout_marginTop="20dp"
+        android:onClick="KlikCekBox"
+        android:layout_alignParentLeft="true"
+        android:text="Nasi + Ayam Original" />
+    <CheckBox
+        android:id="@+id/cbNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@+id/cbNao"
+        android:onClick="KlikCekBox"
+        android:layout_alignLeft="@+id/cbNao"
+        android:text="Nasi + Ayam Crispy" />
+    <CheckBox
+        android:id="@+id/cbKenGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@+id/cbNac"
+        android:onClick="KlikCekBox"
+        android:layout_alignLeft="@+id/cbNac"
+        android:text="Kentang Goreng" />
+    <CheckBox
+        android:id="@+id/cbSfDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@+id/cbKenGo"
+        android:onClick="KlikCekBox"
+        android:layout_alignLeft="@+id/cbKenGo"
+        android:text="Soft Drink" />
+    <CheckBox
+        android:id="@+id/cbAiMi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_below="@+id/cbSfDrink"
+        android:onClick="KlikCekBox"
+        android:layout_alignLeft="@+id/cbSfDrink"
+        android:text="Air Mineral" />
+
+    <TextView
+        android:id="@+id/edHrgNao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/cbNao"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:text="0"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/edHrgNac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/cbNac"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:text="0"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/edHrgKenGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/cbKenGo"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:text="0"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/edHrgSfDrink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/cbSfDrink"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:text="0"
+        android:textColor="#3F51B5" />
+    <TextView
+        android:id="@+id/edHrgAiMi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/cbAiMi"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:text="0"
+        android:textColor="#3F51B5" />
+
+</RelativeLayout>
