@@ -118,4 +118,78 @@
         android:text="0"
         android:textColor="#3F51B5" />
 
+    <RadioGroup
+        android:id="@+id/rgDiskon"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/cbAiMi">
+
+        <RadioButton
+            android:id="@+id/rbTdnol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Tunai Diskon 0%" />
+
+        <RadioButton
+            android:id="@+id/rbCrdSep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Credit Card Diskon 10%" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnPesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgDiskon"
+        android:text="Pesan" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textTotal"
+        android:layout_below="@+id/btnPesan"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="Total :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textStatus"
+        android:layout_below="@+id/textTotal"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="Status :"/>
+
+    <TextView
+        android:id="@+id/edTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textTotal"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:textColor="#4CAF50"
+        android:textSize="16sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textTotalBayar"
+        android:layout_below="@+id/textStatus"
+        android:textSize="16sp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:text="Total Bayar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edTotalBayar"
+        android:layout_below="@+id/textTotalBayar"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Rp. 0,-"/>
+
 </RelativeLayout>
