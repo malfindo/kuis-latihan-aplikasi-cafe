@@ -129,6 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:onClick="KlikRb"
             android:text="Tunai Diskon 0%" />
 
         <RadioButton
@@ -136,6 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:onClick="KlikRb"
             android:text="Credit Card Diskon 10%" />
 
     </RadioGroup>
@@ -145,6 +147,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/rgDiskon"
+        android:onClick="KlikPesan"
         android:text="Pesan" />
     <TextView
         android:layout_width="wrap_content"
@@ -191,5 +194,13 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:text="Rp. 0,-"/>
+
+    <Button
+        android:id="@+id/btnKemCf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edTotalBayar"
+        android:layout_marginTop="20dp"
+        android:text="Kembali" />
 
 </RelativeLayout>

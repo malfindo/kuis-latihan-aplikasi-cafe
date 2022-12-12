@@ -2,6 +2,7 @@ package com.malvin.p3_latcekbox_muhammad_malfin_tip_21_2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +16,21 @@ public class ActivityCafe extends AppCompatActivity {
     CheckBox cbNao, cbNac, cbKenGo, cbSfDrink, cbAiMi;
     RadioGroup rgDiskon;
     RadioButton rbTdnol, rbCrdSep;
-    Button btnPesan;
+    Button btnPesan, btnKemCf;
 
     private boolean checked;
+    private int hrgnao = 0;
+    private int hrgnac = 0;
+    private int hrgkengo = 0;
+    private int hrgsfdrink = 0;
+    private int hrgaimi = 0;
+    private  int totalnd = 0;
+    private double bsd = 0;
+    private double totald = 0;
+
+    private String hcb="";
+    private String hrb="";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +59,8 @@ public class ActivityCafe extends AppCompatActivity {
         rbCrdSep = (RadioButton) findViewById(R.id.rbCrdSep);
 
         btnPesan = (Button) findViewById(R.id.btnPesan);
+        btnKemCf = (Button) findViewById(R.id.btnKemCf);
+
 
         cbNao.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +83,17 @@ public class ActivityCafe extends AppCompatActivity {
             public void onClick(View arg0) { KlikCekBox(arg0); }
         });
 
+        btnKemCf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent KemKeMenu = new Intent(getApplicationContext(), ActivityMenu.class);
+                startActivity(KemKeMenu);
+            }
+        });
+
+
+
+
     }
 
     //ngide radio button
@@ -77,37 +103,103 @@ public class ActivityCafe extends AppCompatActivity {
 
         switch (view.getId()){
             case R.id.cbNao:
-                if (checked)
-                    edHrgNao.setText("15.000");
-                else
-                    edHrgNao.setText("0");
+                if (checked) {
+                    hrgnao = 15000;
+                    hcb = String.valueOf(hrgnao);
+                    edHrgNao.setText(hcb);
+                } else {
+                    hrgnao = 0;
+                    hcb = String.valueOf(hrgnao);
+                    edHrgNao.setText(hcb);
+                }
                 break;
             case R.id.cbNac:
-                if (checked)
-                    edHrgNac.setText("12.000");
-                else
-                    edHrgNac.setText("0");
+                if (checked) {
+                    hrgnac = 12000;
+                    hcb = String.valueOf(hrgnac);
+                    edHrgNac.setText(hcb);
+                } else {
+                    hrgnac = 0;
+                    hcb = String.valueOf(hrgnac);
+                    edHrgNac.setText(hcb);
+                }
                 break;
             case R.id.cbKenGo:
-                if (checked)
-                    edHrgKenGo.setText("10.000");
-                else
-                    edHrgKenGo.setText("0");
+                if (checked) {
+                    hrgkengo = 10000;
+                    hcb = String.valueOf(hrgkengo);
+                    edHrgKenGo.setText(hcb);
+                } else {
+                    hrgkengo = 0;
+                    hcb = String.valueOf(hrgkengo);
+                    edHrgKenGo.setText(hcb);
+                }
                 break;
             case R.id.cbSfDrink:
-                if (checked)
-                    edHrgSfDrink.setText("5.000");
-                else
-                    edHrgSfDrink.setText("0");
+                if (checked) {
+                    hrgsfdrink = 5000;
+                    hcb = String.valueOf(hrgsfdrink);
+                    edHrgSfDrink.setText(hcb);
+                } else {
+                    hrgsfdrink = 0;
+                    hcb = String.valueOf(hrgsfdrink);
+                    edHrgSfDrink.setText(hcb);
+                }
                 break;
             case R.id.cbAiMi:
-                if (checked)
-                    edHrgAiMi.setText("3.000");
-                else
-                    edHrgAiMi.setText("0");
+                if (checked) {
+                    hrgaimi = 3000;
+                    hcb = String.valueOf(hrgaimi);
+                    edHrgAiMi.setText(hcb);
+                } else {
+                    hrgaimi = 0;
+                    hcb = String.valueOf(hrgaimi);
+                    edHrgAiMi.setText(hcb);
+                }
                 break;
         }
     }
+
+    public void KlikRb(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.rbTdnol:
+                if (checked) {
+                    totalnd = hrgnao + hrgnac + hrgkengo + hrgsfdrink + hrgaimi;
+                    hrb = String.valueOf(totalnd);
+                    edTotal.setText(hrb);
+                    textStatus.setText("Status : Pembayaran Tunai");
+                }
+                break;
+            case R.id.rbCrdSep:
+                if (checked) {
+                    totalnd = hrgnao + hrgnac + hrgkengo + hrgsfdrink + hrgaimi;
+                    bsd = totalnd * 0.1;
+                    totald = totalnd - bsd;
+                    hrb = String.valueOf(totalnd);
+                    edTotal.setText(hrb);
+                    textStatus.setText("Status : Pembayaran Credit Card");
+                }
+                break;
+        }
+    }
+
+    public void KlikPesan(View view) {
+        if (rbTdnol.isChecked()) {
+            totalnd = hrgnao + hrgnac + hrgkengo + hrgsfdrink + hrgaimi;
+            hrb = String.valueOf(totalnd);
+            edTotalBayar.setText(hrb);
+        } else {
+            totalnd = hrgnao + hrgnac + hrgkengo + hrgsfdrink + hrgaimi;
+            bsd = totalnd * 0.1;
+            totald = totalnd - bsd;
+            hrb = String.valueOf(totald);
+            edTotalBayar.setText(hrb);
+        }
+    }
+
+
 
 
 
