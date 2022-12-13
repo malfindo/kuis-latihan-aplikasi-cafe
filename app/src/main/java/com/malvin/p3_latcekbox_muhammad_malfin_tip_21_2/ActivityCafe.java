@@ -90,13 +90,9 @@ public class ActivityCafe extends AppCompatActivity {
                 startActivity(KemKeMenu);
             }
         });
-
-
-
-
     }
 
-    //ngide radio button
+    // radio button
 
     public void KlikCekBox(View view) {
         checked = ((CheckBox) view).isChecked();
@@ -198,17 +194,5 @@ public class ActivityCafe extends AppCompatActivity {
             edTotalBayar.setText(hrb);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
